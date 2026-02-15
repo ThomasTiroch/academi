@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heros Academy - Education is the Key to Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        .container {
+            max-width: 1280px;
+        }
+        .btn-primary {
+            @apply bg-red-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition-colors duration-300;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-4 text-red-800;
+        }
+        .section-subtitle {
+            @apply text-lg md:text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto;
+        }
+        .icon-lg {
+            width: 3rem;
+            height: 3rem;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: scale(0);
+            opacity: 0;
+            @apply flex items-center p-3 rounded-full shadow-lg bg-green-500 text-white;
+        }
+        .whatsapp-button.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .whatsapp-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            @apply p-4;
+        }
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 text-xl font-bold text-red-800">
+                <img src="img/logo.png" alt="Heros Academy Logo" class="h-8 w-8">
+                <span>Heros Academy</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+               <a href="D.html" class="text-gray-600 hover:text-red-600 transition-colors">Board & Directorate</a>
+                <a href="P.html" class="text-gray-600 hover:text-red-600 transition-colors">Programs</a>
+                <a href="F.html" class="text-gray-600 hover:text-red-600 transition-colors">Fees</a>
+                <a href="M.html" class="text-gray-600 hover:text-red-600 transition-colors">Meal Schedule</a>
+                <a href="S.html" class="text-gray-600 hover:text-red-600 transition-colors">Sanitation & Utilities</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-500 hover:text-red-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none">
+            <div class="flex flex-col items-center space-y-4 text-xl font-medium">
+                <a href="D.html" class="text-gray-600 hover:text-red-600 transition-colors">Board & Directorate</a>
+                <a href="P.html" class="text-gray-600 hover:text-red-600 transition-colors">Programs</a>
+                <a href="F.html" class="text-gray-600 hover:text-red-600 transition-colors">Discipline</a>
+                <a href="M.html" class="text-gray-600 hover:text-red-600 transition-colors">Admissions</a>
+                <a href="S.html" class="text-gray-600 hover:text-red-600 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative bg-red-50 py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-red-800 leading-tight mb-4">
+                    Heros Academy
+                    <br>
+                    <span class="text-red-600">Education is the Key to Success</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    A nurturing environment where every student can achieve their full potential.
+                </p>
+                <a href="#admissions" class="btn-primary">
+                    Apply Now
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">Board & Directorate</h2>
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-12">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0">
+                        <img src="img/m.jpg" alt="Heros Academy Campus" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-bold text-red-700 mb-2">Executive Summary</h3>
+                        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                            Heros Academy is a Mixed Nursery, Primary, and Junior Secondary School located in **Shanzu, Mombasa County, Kenya**. We aim to be a successful and sustainable educational center that provides affordable, high-quality, comprehensive education to children, especially those from low-income households. Our approach is driven by social inclusion, creating a conducive environment that embraces social, religious, and cultural diversity while supporting every learner to achieve their full potential.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Since starting operations in **2009** with a population of **95 pupils**, we have grown to over **350 pupils** and have a dedicated team of **28 staff members**. Our facilities include **13 classrooms**, a kitchen, and separate latrines for boys and girls.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 p-8 rounded-lg shadow-inner mb-12 border-2 border-green-500">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4 text-center">Our Vision & Mission</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Our Vision</h4>
+                            <p class="text-lg text-gray-700">A community where all children have an equal opportunity to access quality education services for sustainable development.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Our Mission</h4>
+                            <p class="text-lg text-gray-700">To blend the Kenyan curriculum with global best practices to develop well-rounded human beings who make amazing academic progress and are ready for work in the modern world. We strive to eliminate barriers to education by providing a comprehensive school where all children receive the best possible education in a safe and secure environment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4 text-center">Key Objectives</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 max-w-2xl mx-auto">
+                        <li>To build a safe and secure school providing an exciting, inclusive curriculum that equips children with skills for lifelong learning and achieving high standards of living.</li>
+                        <li>To provide equal opportunities for development for all members of the school community.</li>
+                        <li>To make the school a part of the community and develop strong and productive links with it.</li>
+                        <li>To recognize and value parental rights to involvement in their children’s education through close working relationships.</li>
+                        <li>To prepare children to be responsible, God-fearing citizens with the flexibility and skills to meet the demands of a rapidly changing society.</li>
+                        <li>To enable learners to establish social and personal relationships based on respect, understanding, and cooperation.</li>
+                        <li>To contribute positively to community and national development through job creation for both teaching and non-teaching personnel.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-100 p-8 rounded-lg shadow-inner mt-12">
+                    <h3 class="text-2xl font-bold text-red-700 mb-4 text-center">Our Commitment to Excellence</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Full ICT Integration</h4>
+                            <p class="text-lg text-gray-700">We offer fully integrated **ICT** to support independent and experiential learning and group projects in coding, robotics, entrepreneurship, and career workshops. Our curriculum goes beyond national requirements to equip children for a dynamic and exciting world.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-2 text-red-600">Strategic Partnerships</h4>
+                            <p class="text-lg text-gray-700">We value partnerships and teamwork both internally and externally. We welcome opportunities for collaboration with individuals, organizations, and institutions that share our vision and are willing to join our cause. Together, we can enhance our capacity to achieve our ultimate goal: to give every student the best education and equip them with the skills to flourish in a consistently changing world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">Explore Our Programs</h2>
+                <p class="section-subtitle">
+                    We offer a comprehensive curriculum and a variety of extracurricular activities designed to meet the diverse needs of our students.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border-2 border-green-500">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25m0 0l-3-3m3 3l3-3m-3-3V3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-red-700 mb-2">Academics</h3>
+                        <p class="text-gray-600 text-lg">
+                            A rigorous curriculum that blends national requirements with global best practices to ensure amazing academic progress.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border-2 border-green-500">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.002a7.5 7.5 0 1 1 0 15A7.5 7.5 0 0 1 12 6.002z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12h-6M12 9v6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-red-700 mb-2">Sports & Clubs</h3>
+                        <p class="text-gray-600 text-lg">
+                            An active athletics program and a wide range of clubs, designed to develop a well-rounded human being.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-lg flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 border-2 border-green-500">
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3V7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-red-700 mb-2">Arts & Creativity</h3>
+                        <p class="text-gray-600 text-lg">
+                            We encourage learners to establish social and personal relationships based on respect, understanding, and cooperation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discipline" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">Discipline & Development</h2>
+                <h3 class="text-2xl font-bold text-red-700 text-center mb-8">Building Strong Values for Strong Children</h3>
+                <div class="bg-white p-8 rounded-lg shadow-lg border-2 border-green-500">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        At our school, discipline is practiced consistently, but always with respect and positive methods – never through corporal punishment or violence. We follow modern educational and developmental psychology principles, in line with international human rights and child protection standards, to create a safe, respectful, and inspiring learning environment.
+                    </p>
+                    <div class="space-y-4 text-lg text-gray-700 mb-6">
+                        <p>👉 Instead of punishment, we apply clear rules, respectful communication, and supportive teaching methods.</p>
+                        <p>👉 Children are guided to develop self-control, responsibility, and conflict-resolution skills.</p>
+                        <p>👉 Our goal is for every child to feel safe, valued, and able to thrive.</p>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <span class="font-bold">🌱 We believe each child has unique potential.</span> Our mission is to develop these talents, preparing students for the job market with practical skills, confidence, and future-readiness.
+                    </p>
+                    <h4 class="text-xl font-semibold text-red-600 mb-4">🔹 Learning goes beyond the classroom:</h4>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 ml-4">
+                        <li>Hands-on projects that build teamwork and responsibility</li>
+                        <li>Excursions and applied learning that connect theory with real life</li>
+                        <li>Sustainable initiatives (creative use of resources, environmental awareness, community impact)</li>
+                        <li>Innovation and creativity as foundations for growth</li>
+                    </ul>
+                    <p class="text-lg text-gray-700 mt-6 leading-relaxed">
+                        <span class="font-bold">✨ For us, discipline means guiding values with care – never through fear.</span> Education here is more than knowledge – it is about character, skills, and opportunities for a successful future.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="admissions" class="bg-red-600 text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Join Our Community</h2>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Discover the difference a Heros Academy education can make. We're currently accepting applications for the upcoming school year.
+                </p>
+                <a href="#contact" class="bg-white text-red-600 font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-red-50 transition-colors duration-300">
+                    Learn More & Apply
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 text-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-red-700">Phone</h3>
+                        <a href="tel:+254726580840" class="text-lg md:text-xl text-gray-600 hover:text-red-600 transition-colors">Estha Rehema Songok +254726580840
+                            Rev.Johana Songok +254722285104
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-red-700">Email</h3>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:herosacademyshanzuaic@yahoo.com" class="hover:text-red-600 transition-colors">herosacademyshanzuaic@yahoo.com</a>
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:esther.songok@gmail.com" class="hover:text-red-600 transition-colors">esther.songok@gmail.com</a>
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:pjsongok@yahoo.com" class="hover:text-red-600 transition-colors">pjsongok@yahoo.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-red-700">Address</h3>
+                        <p class="text-lg md:text-xl text-gray-600">P.O. BOX. 10102-80101, Shanzu, Mombasa County, Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-red-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4 text-lg">
+                <a href="#" class="hover:text-white transition-colors">Home</a> &bull;
+                <a href="#about" class="hover:text-white transition-colors">Board & Directorate</a> &bull;
+                <a href="#programs" class="hover:text-white transition-colors">Programs</a> &bull;
+                <a href="#discipline" class="hover:text-white transition-colors">Discipline</a> &bull;
+                <a href="#admissions" class="hover:text-white transition-colors">Admissions</a> &bull;
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p>&copy; 2024 Heros Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254726580840?text=Hello%20Heros%20Academy%20I'm%20interested%20in%20learning%20more." target="_blank" class="whatsapp-button" id="whatsapp-btn">
+        <div class="whatsapp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-8 h-8">
+                <path d="M380.9 97.1C339.7 54.7 283.6 30 224.2 30c-113.6 0-205.8 92.2-205.8 205.8 0 35.3 9.7 69.8 28.1 100.9l-29.6 108.3 111.9-29.4c30.1 16.4 64.6 25 100.2 25h.1c113.6 0 205.8-92.2 205.8-205.8-.1-59.5-24.8-115.6-67.1-156.8zM224.2 400.9h-.1c-32.9 0-63.7-8.9-90.9-24.4l-6.4-3.8-66.5 17.5 17.9-65.7-4.2-6.7c-17.6-28.2-27.2-60.7-27.2-94.8 0-93.5 76-169.5 169.5-169.5 49.3 0 95.7 21.1 129.2 54.6 33.5 33.5 54.6 79.9 54.6 129.2.1 93.5-75.9 169.5-169.5 169.5zM342.9 292.1c-1.7-2.9-6.9-4.6-14.7-8.5-7.8-3.9-46.3-22.9-53.6-25.5-7.3-2.6-12.6-3.9-17.9 3.9-5.3 7.8-20.6 25.5-25.2 30.8-4.6 5.3-9.3 5.9-17.9 1.4-10.4-5.3-44-16.2-83.6-51.6-31.9-28-53.5-63-59.8-73.6-6.3-10.4-.7-16 4.6-21.3 4.3-4.3 9.3-10.2 13.9-15.3 4.6-5.1 6.1-4.3 9.3-4.3s6.8-.7 10.4-.7c3.6 0 9.3-.5 13.9 5.3 4.6 5.3 5.9 12.6 8.5 15.8.7.7 1.4 1.4 2.1 2.1 2.6 3.9 5.3 7.9 5.9 8.5 2.6 2.6 1.7 4.6-1.7 8.5-4.6 5.3-9.3 10.4-14.7 16.2-5.9 6.8-11.3 13.5-13.9 16.2-2.6 2.6-2.6 4.6-.3 8.5 2.6 4.6 10.7 15.3 15.1 23.3 4.3 7.8 8.9 15.8 13.5 24.3 5.3 9.5 12.6 19.1 19.8 28.1 7.3 8.5 15.8 16.7 24.1 24.6 5.9 5.5 12.1 11.2 19.8 16.7 5.3 3.6 10.7 7.1 16.2 10.4 7.8 4.6 15.8 8.1 25.2 10.4 4.8 1.4 9.6 2.6 14.2 3.2 5.9 1 11.8 1.4 17.6 1.4h.1c9.3 0 17.9-1.4 26.5-4.1 8.6-2.6 16.4-5.9 22.8-9.9 2.1-1.4 3.9-2.9 5.3-4.1.7-.7 1.4-1.4 2.1-2.1 2.6-2.6 3.9-4.6 3.9-6.3 0-1.7-4.6-7.3-9.3-12.6-4.6-5.3-9.3-10.2-13.9-15.3z" />
+            </svg>
+        </div>
+        <span class="ml-2 font-bold text-lg">Help</span>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const contactSection = document.getElementById('contact');
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            const isMenuOpen = mobileMenu.classList.contains('translate-y-0');
+            if (isMenuOpen) {
+                // Close menu
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            });
+        });
+
+        // Show/hide WhatsApp button on scroll
+        window.addEventListener('scroll', () => {
+            const contactSectionTop = contactSection.getBoundingClientRect().top;
+            if (contactSectionTop < window.innerHeight) {
+                whatsappBtn.classList.remove('show');
+            } else if (window.scrollY > 100) {
+                whatsappBtn.classList.add('show');
+            } else {
+                whatsappBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heros Academy - Education is the Key to Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        .container {
+            max-width: 1280px;
+        }
+        .btn-primary {
+            @apply bg-red-600 text-white font-medium py-3 px-6 rounded-lg shadow-md hover:bg-red-700 transition-colors duration-300;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-4 text-red-800;
+        }
+        .section-subtitle {
+            @apply text-lg md:text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto;
+        }
+        .icon-lg {
+            width: 3rem;
+            height: 3rem;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: scale(0);
+            opacity: 0;
+            @apply flex items-center p-3 rounded-full shadow-lg bg-green-500 text-white;
+        }
+        .whatsapp-button.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .whatsapp-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            @apply p-4;
+        }
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 text-xl font-bold text-red-800">
+                <img src="img/logo.png" alt="Heros Academy Logo" class="h-8 w-8">
+                <span>Heros Academy</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-lg font-medium">
+               <a href="D.html" class="text-gray-600 hover:text-red-600 transition-colors">Board & Directorate</a>
+                <a href="P.html" class="text-gray-600 hover:text-red-600 transition-colors">Programs</a>
+                <a href="F.html" class="text-gray-600 hover:text-red-600 transition-colors">Fees</a>
+                <a href="M.html" class="text-gray-600 hover:text-red-600 transition-colors">Meal Schedule</a>
+                <a href="S.html" class="text-gray-600 hover:text-red-600 transition-colors">Sanitation & Utilities</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-500 hover:text-red-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg py-4 transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none">
+            <div class="flex flex-col items-center space-y-4 text-xl font-medium">
+                <a href="D.html" class="text-gray-600 hover:text-red-600 transition-colors">Board & Directorate</a>
+                <a href="P.html" class="text-gray-600 hover:text-red-600 transition-colors">Programs</a>
+                <a href="F.html" class="text-gray-600 hover:text-red-600 transition-colors">Fees</a>
+                <a href="M.html" class="text-gray-600 hover:text-red-600 transition-colors">Meal Schedule</a>
+                <a href="S.html" class="text-gray-600 hover:text-red-600 transition-colors">Sanitation & Utilities</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative bg-red-50 py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-red-800 leading-tight mb-4">
+                    Menue Shedule
+                    <br>
+                    <span class="text-red-600">Plan</span>
+                </h1>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #006400; /* Dark Green */
+      margin-bottom: 20px;
+    }
+    .menu {
+      max-width: 600px;
+      margin: auto;
+      border: 2px solid #006400;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .day {
+      padding: 15px;
+      font-size: 1.1em;
+    }
+    .day:nth-child(odd) {
+      background-color: #f0fff0; /* Light green background */
+    }
+    .day:nth-child(even) {
+      background-color: #ffecec; /* Light red background */
+    }
+    .day strong {
+      color: #b22222; /* Firebrick red */
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Weekly School Menu 🍅</h1>
+  <div class="menu">
+    <div class="day"><strong>Monday:</strong> Maize and Beans + Cabbage</div>
+    <div class="day"><strong>Tuesday:</strong> Rice and Green Grams + Cabbage</div>
+    <div class="day"><strong>Wednesday:</strong> Ugali and Beans + Cabbage</div>
+    <div class="day"><strong>Thursday:</strong> Maize and Beans + Cabbage</div>
+    <div class="day"><strong>Friday:</strong> Rice and Meat (Pilau) + Cabbage</div>
+  </div>
+
+  <div class="footer">
+    🥣 Every Morning: Porridge for Students | 🍵 Tea for Teachers
+  </div>
+</
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    A nurturing environment where every student can achieve their full potential.
+                </p>
+                
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-12">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0">
+                        <img src="img/1.jpg" alt="Heros Academy Campus" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="lg:w-1/2 mb-8 lg:mb-0">
+                        <img src="img/2.jpg" alt="Heros Academy Campus" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-bold text-red-700 mb-2">Monday:Maize and beans; </h3>
+<h3 class="text-2xl font-semibold mb-2 text-red-700">Email</h3>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:herosacademyshanzuaic@yahoo.com" class="hover:text-red-600 transition-colors">herosacademyshanzuaic@yahoo.com</a>
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:esther.songok@gmail.com" class="hover:text-red-600 transition-colors">esther.songok@gmail.com</a>
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-600">
+                            <a href="mailto:pjsongok@yahoo.com" class="hover:text-red-600 transition-colors">pjsongok@yahoo.com</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2 text-red-700">Address</h3>
+                        <p class="text-lg md:text-xl text-gray-600">P.O. BOX. 10102-80101, Shanzu, Mombasa County, Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-red-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-4 text-lg">
+                <a href="#" class="hover:text-white transition-colors">Home</a> &bull;
+                <a href="#about" class="hover:text-white transition-colors">Board & Directorate</a> &bull;
+                <a href="#programs" class="hover:text-white transition-colors">Programs</a> &bull;
+                <a href="#discipline" class="hover:text-white transition-colors">Discipline</a> &bull;
+                <a href="#admissions" class="hover:text-white transition-colors">Admissions</a> &bull;
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p>&copy; 2024 Heros Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254726580840?text=Hello%20Heros%20Academy%20I'm%20interested%20in%20learning%20more." target="_blank" class="whatsapp-button" id="whatsapp-btn">
+        <div class="whatsapp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-8 h-8">
+                <path d="M380.9 97.1C339.7 54.7 283.6 30 224.2 30c-113.6 0-205.8 92.2-205.8 205.8 0 35.3 9.7 69.8 28.1 100.9l-29.6 108.3 111.9-29.4c30.1 16.4 64.6 25 100.2 25h.1c113.6 0 205.8-92.2 205.8-205.8-.1-59.5-24.8-115.6-67.1-156.8zM224.2 400.9h-.1c-32.9 0-63.7-8.9-90.9-24.4l-6.4-3.8-66.5 17.5 17.9-65.7-4.2-6.7c-17.6-28.2-27.2-60.7-27.2-94.8 0-93.5 76-169.5 169.5-169.5 49.3 0 95.7 21.1 129.2 54.6 33.5 33.5 54.6 79.9 54.6 129.2.1 93.5-75.9 169.5-169.5 169.5zM342.9 292.1c-1.7-2.9-6.9-4.6-14.7-8.5-7.8-3.9-46.3-22.9-53.6-25.5-7.3-2.6-12.6-3.9-17.9 3.9-5.3 7.8-20.6 25.5-25.2 30.8-4.6 5.3-9.3 5.9-17.9 1.4-10.4-5.3-44-16.2-83.6-51.6-31.9-28-53.5-63-59.8-73.6-6.3-10.4-.7-16 4.6-21.3 4.3-4.3 9.3-10.2 13.9-15.3 4.6-5.1 6.1-4.3 9.3-4.3s6.8-.7 10.4-.7c3.6 0 9.3-.5 13.9 5.3 4.6 5.3 5.9 12.6 8.5 15.8.7.7 1.4 1.4 2.1 2.1 2.6 3.9 5.3 7.9 5.9 8.5 2.6 2.6 1.7 4.6-1.7 8.5-4.6 5.3-9.3 10.4-14.7 16.2-5.9 6.8-11.3 13.5-13.9 16.2-2.6 2.6-2.6 4.6-.3 8.5 2.6 4.6 10.7 15.3 15.1 23.3 4.3 7.8 8.9 15.8 13.5 24.3 5.3 9.5 12.6 19.1 19.8 28.1 7.3 8.5 15.8 16.7 24.1 24.6 5.9 5.5 12.1 11.2 19.8 16.7 5.3 3.6 10.7 7.1 16.2 10.4 7.8 4.6 15.8 8.1 25.2 10.4 4.8 1.4 9.6 2.6 14.2 3.2 5.9 1 11.8 1.4 17.6 1.4h.1c9.3 0 17.9-1.4 26.5-4.1 8.6-2.6 16.4-5.9 22.8-9.9 2.1-1.4 3.9-2.9 5.3-4.1.7-.7 1.4-1.4 2.1-2.1 2.6-2.6 3.9-4.6 3.9-6.3 0-1.7-4.6-7.3-9.3-12.6-4.6-5.3-9.3-10.2-13.9-15.3z" />
+            </svg>
+        </div>
+        <span class="ml-2 font-bold text-lg">Help</span>
+    </a>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = mobileMenu.querySelectorAll('a');
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const contactSection = document.getElementById('contact');
+
+        // Toggle mobile menu
+        mobileMenuBtn.addEventListener('click', () => {
+            const isMenuOpen = mobileMenu.classList.contains('translate-y-0');
+            if (isMenuOpen) {
+                // Close menu
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+            });
+        });
+
+        // Show/hide WhatsApp button on scroll
+        window.addEventListener('scroll', () => {
+            const contactSectionTop = contactSection.getBoundingClientRect().top;
+            if (contactSectionTop < window.innerHeight) {
+                whatsappBtn.classList.remove('show');
+            } else if (window.scrollY > 100) {
+                whatsappBtn.classList.add('show');
+            } else {
+                whatsappBtn.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
