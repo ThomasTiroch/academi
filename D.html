@@ -59,13 +59,42 @@
         .whatsapp-icon:hover {
             transform: scale(1.1);
         }
+        
+
+         .menu {
+      max-width: 600px;
+      margin: auto;
+      border: 2px solid #006400;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .day {
+      padding: 15px;
+      font-size: 1.1em;
+    }
+    .day:nth-child(odd) {
+      background-color: #f0fff0; /* Light green background */
+    }
+    .day:nth-child(even) {
+      background-color: #ffecec; /* Light red background */
+    }
+    .day strong {
+      color: #b22222; /* Firebrick red */
+    }
+
+      h1 {
+      text-align: center;
+      color: #006400; /* Dark Green */
+      margin-bottom: 20px;
+    }
     </style>
 </head>
 <body>
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2 text-xl font-bold text-red-800">
+            <a href="index.html" class="flex items-center space-x-2 text-xl font-bold text-red-800">
                 <img src="img/logo.png" alt="Heros Academy Logo" class="h-8 w-8">
                 <span>Heros Academy</span>
             </a>
@@ -110,11 +139,20 @@
                 <a href="#admissions" class="btn-primary">
                     Apply Now
                 </a>
+                 <h1>Directorate Office Hours</h1>
+  <div class="menu">
+    <div class="day"><strong>Monday – Friday:</strong> 8:00 AM – 4:30 PM</div>
+    <div class="day"><strong>Saturday & Sunday:</strong> Closed</div>
+    <div class="day"><strong>Public Holidays:</strong> Closed</div>
+    <div class="day"><strong>For appointments outside official hours, please contact the school administration in advance.</div>
+    
+  </div>
             </div>
         </section>
 
         <section id="about" class="py-16 md:py-24">
             <div class="container mx-auto px-4">
+             
                 <h2 class="section-title">Board & Directorate</h2>
                 <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-12">
                     <div class="lg:w-1/2 mb-8 lg:mb-0">

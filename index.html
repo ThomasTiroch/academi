@@ -60,15 +60,32 @@
             transform: scale(1.1);
         }
 
-        table {
-            color: red;
-            margin: 0 auto ;
-            font-size: 30px;
-            text-align: center;
-            
-        }
-        
-
+         .menu {
+      max-width: 600px;
+      margin: auto;
+      border: 2px solid #006400;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .day {
+      padding: 15px;
+      font-size: 1.1em;
+    }
+    .day:nth-child(odd) {
+      background-color: #f0fff0; /* Light green background */
+    }
+    .day:nth-child(even) {
+      background-color: #ffecec; /* Light red background */
+    }
+    .day strong {
+      color: #b22222; /* Firebrick red */
+    }
+  h1 {
+      text-align: center;
+      color: #006400; /* Dark Green */
+      margin-bottom: 20px;
+    }
     </style>
 </head>
 <body>
@@ -120,6 +137,14 @@
                 <a href="#admissions" class="btn-primary">
                     Apply Now
                 </a>
+                 <h1>Directorate Office Hours</h1>
+  <div class="menu">
+    <div class="day"><strong>Monday – Friday:</strong> 8:00 AM – 4:30 PM</div>
+    <div class="day"><strong>Saturday & Sunday:</strong> Closed</div>
+    <div class="day"><strong>Public Holidays:</strong> Closed</div>
+    <div class="day"><strong>For appointments outside official hours, please contact the school administration in advance.</div>
+    
+  </div>
             </div>
         </section>
 
@@ -127,18 +152,7 @@
             <div class="container mx-auto px-4">
                 <h2 class="section-title">Board & Directorate</h2>
 
-                <div class="working-hours">
-                <table>
-                 <tr>
-                 <td>Monday to Friday<td>
-                  <td>8am to 5pm<td>
-                  </tr>
-                  <tr>
-                    <td>Saturday & Sunday<td>  
-                    <td>closed<td>
-                  </tr>
-                
-                </table>
+               
                 </div>
                
                 <div class="flex flex-col lg:flex-row items-center lg:space-x-12 mb-12">
