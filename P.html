@@ -59,61 +59,85 @@
         .whatsapp-icon:hover {
             transform: scale(1.1);
         }
-         .floating-container {
+          /* 1. Haupt-Container: Fixiert die Buttons rechts unten */
+.floating-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: column; /* Stapelt die Buttons vertikal */
+    gap: 12px; /* Abstand zwischen den Buttons */
     z-index: 9999;
-    align-items: flex-end; /* Richtet Buttons rechts aus */
+    align-items: flex-end; /* Richtet Buttons an der rechten Seite aus */
 }
 
+/* 2. Grunddesign für alle Buttons */
 .floating-btn {
     display: flex;
     align-items: center;
-    width: 44px; /* Breite nur für das Icon */
-    height: 44px;
-    padding: 0 10px; /* Padding links/rechts */
+    width: 46px; /* Startbreite: Nur das Icon ist sichtbar */
+    height: 46px;
+    padding: 0 11px; /* Zentriert das Icon im Button */
     border-radius: 50px;
     color: white;
     text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    transition: width 0.4s ease; /* Die Animation für das Ausfahren */
-    overflow: hidden; /* Versteckt den Text, wenn der Button schmal ist */
-    white-space: nowrap; /* Verhindert Zeilenumbruch beim Text */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+    overflow: hidden; /* Versteckt den Text im Normalzustand */
+    white-space: nowrap; /* Verhindert Textumbruch */
 }
 
-/* Hover-Zustand: Button wird breiter */
+/* 3. Hover-Zustand: Der Button fährt seitlich aus */
 .floating-btn:hover {
-    width: 140px; /* Genug Platz für Icon + Text */
+    width: 160px; /* Breite im ausgefahrenen Zustand */
 }
 
+/* 4. Icon-Styling */
 .floating-btn svg {
     width: 24px;
     height: 24px;
-    flex-shrink: 0; /* Verhindert, dass das Icon gestaucht wird */
+    flex-shrink: 0; /* Verhindert, dass das Icon beim Hover gestaucht wird */
 }
 
+/* 5. Text-Styling (blendet sich sanft ein) */
 .btn-text {
-    margin-left: 15px;
-    font-size: 16px;
+    margin-left: 12px;
+    font-size: 15px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-/* Text einblenden beim Hover */
 .floating-btn:hover .btn-text {
     opacity: 1;
 }
 
-/* Farben */
-.whatsapp-btn { background-color: #25d366; }
-.linkedin-btn { background-color: #0077b5; }
-.facebook-btn { background-color: #1877f2; }
+/* 6. Individuelle Farben für die Netzwerke */
+.linkedin-btn { 
+    background-color: #0077b5; 
+}
+
+.facebook-btn { 
+    background-color: #1877f2; 
+}
+
+.x-btn { 
+    background-color: #000000; 
+}
+
+.tiktok-btn { 
+    background-color: #010101; 
+}
+
+.whatsapp-btn { 
+    background-color: #25d366; 
+}
+
+/* 7. Kleiner Interaktionseffekt beim Draufklicken */
+.floating-btn:active {
+    transform: scale(0.95);
+}
     </style>
 </head>
 <body>
@@ -372,8 +396,8 @@
         </div>
     </footer>
 
-     <div class="floating-container">
-    <a href="DEIN_LINKEDIN_LINK" target="_blank" class="floating-btn linkedin-btn">
+    <div class="floating-container">
+    <a href="https://www.linkedin.com/in/hero-s-aic-academy-shanzu-a606123a6?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="floating-btn linkedin-btn">
         <svg viewBox="0 0 448 512" fill="currentColor"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
         <span class="btn-text">LinkedIn</span>
     </a>
@@ -381,6 +405,16 @@
     <a href="https://www.facebook.com/groups/1907200953505354/?ref=share&mibextid=NSMWBT" target="_blank" class="floating-btn facebook-btn">
         <svg viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.75l-11 71.69h-57.75V501C413.31 482.38 504 379.78 504 256z"/></svg>
         <span class="btn-text">Facebook</span>
+    </a>
+
+    <a href="https://x.com/DEIN_PROFIL" target="_blank" class="floating-btn x-btn">
+        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+        <span class="btn-text">X (Twitter)</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@DEIN_PROFIL" target="_blank" class="floating-btn tiktok-btn">
+        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/></svg>
+        <span class="btn-text">TikTok</span>
     </a>
 
     <a href="https://wa.me/254726580840?text=Hello%20Heros%20Academy%20I'm%20interested%20in%20learning%20more." target="_blank" class="floating-btn whatsapp-btn">
