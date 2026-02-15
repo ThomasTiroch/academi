@@ -364,6 +364,62 @@ This contribution not only supports our sustainability efforts and our commitmen
   font-size: 0.95em;
   color: #333;
 }
+
+ .floating-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    align-items: flex-end; /* Richtet Buttons rechts aus */
+}
+
+.floating-btn {
+    display: flex;
+    align-items: center;
+    width: 44px; /* Breite nur für das Icon */
+    height: 44px;
+    padding: 0 10px; /* Padding links/rechts */
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: width 0.4s ease; /* Die Animation für das Ausfahren */
+    overflow: hidden; /* Versteckt den Text, wenn der Button schmal ist */
+    white-space: nowrap; /* Verhindert Zeilenumbruch beim Text */
+}
+
+/* Hover-Zustand: Button wird breiter */
+.floating-btn:hover {
+    width: 140px; /* Genug Platz für Icon + Text */
+}
+
+.floating-btn svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0; /* Verhindert, dass das Icon gestaucht wird */
+}
+
+.btn-text {
+    margin-left: 15px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Text einblenden beim Hover */
+.floating-btn:hover .btn-text {
+    opacity: 1;
+}
+
+/* Farben */
+.whatsapp-btn { background-color: #25d366; }
+.linkedin-btn { background-color: #0077b5; }
+.facebook-btn { background-color: #1877f2; }
 </style>
 
         <section id="about" class="py-16 md:py-24">
@@ -412,14 +468,22 @@ This contribution not only supports our sustainability efforts and our commitmen
         </div>
     </footer>
 
-    <a href="https://wa.me/254726580840?text=Hello%20Heros%20Academy%20I'm%20interested%20in%20learning%20more." target="_blank" class="whatsapp-button" id="whatsapp-btn">
-        <div class="whatsapp-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-8 h-8">
-                <path d="M380.9 97.1C339.7 54.7 283.6 30 224.2 30c-113.6 0-205.8 92.2-205.8 205.8 0 35.3 9.7 69.8 28.1 100.9l-29.6 108.3 111.9-29.4c30.1 16.4 64.6 25 100.2 25h.1c113.6 0 205.8-92.2 205.8-205.8-.1-59.5-24.8-115.6-67.1-156.8zM224.2 400.9h-.1c-32.9 0-63.7-8.9-90.9-24.4l-6.4-3.8-66.5 17.5 17.9-65.7-4.2-6.7c-17.6-28.2-27.2-60.7-27.2-94.8 0-93.5 76-169.5 169.5-169.5 49.3 0 95.7 21.1 129.2 54.6 33.5 33.5 54.6 79.9 54.6 129.2.1 93.5-75.9 169.5-169.5 169.5zM342.9 292.1c-1.7-2.9-6.9-4.6-14.7-8.5-7.8-3.9-46.3-22.9-53.6-25.5-7.3-2.6-12.6-3.9-17.9 3.9-5.3 7.8-20.6 25.5-25.2 30.8-4.6 5.3-9.3 5.9-17.9 1.4-10.4-5.3-44-16.2-83.6-51.6-31.9-28-53.5-63-59.8-73.6-6.3-10.4-.7-16 4.6-21.3 4.3-4.3 9.3-10.2 13.9-15.3 4.6-5.1 6.1-4.3 9.3-4.3s6.8-.7 10.4-.7c3.6 0 9.3-.5 13.9 5.3 4.6 5.3 5.9 12.6 8.5 15.8.7.7 1.4 1.4 2.1 2.1 2.6 3.9 5.3 7.9 5.9 8.5 2.6 2.6 1.7 4.6-1.7 8.5-4.6 5.3-9.3 10.4-14.7 16.2-5.9 6.8-11.3 13.5-13.9 16.2-2.6 2.6-2.6 4.6-.3 8.5 2.6 4.6 10.7 15.3 15.1 23.3 4.3 7.8 8.9 15.8 13.5 24.3 5.3 9.5 12.6 19.1 19.8 28.1 7.3 8.5 15.8 16.7 24.1 24.6 5.9 5.5 12.1 11.2 19.8 16.7 5.3 3.6 10.7 7.1 16.2 10.4 7.8 4.6 15.8 8.1 25.2 10.4 4.8 1.4 9.6 2.6 14.2 3.2 5.9 1 11.8 1.4 17.6 1.4h.1c9.3 0 17.9-1.4 26.5-4.1 8.6-2.6 16.4-5.9 22.8-9.9 2.1-1.4 3.9-2.9 5.3-4.1.7-.7 1.4-1.4 2.1-2.1 2.6-2.6 3.9-4.6 3.9-6.3 0-1.7-4.6-7.3-9.3-12.6-4.6-5.3-9.3-10.2-13.9-15.3z" />
-            </svg>
-        </div>
-        <span class="ml-2 font-bold text-lg">Help</span>
+     <div class="floating-container">
+    <a href="DEIN_LINKEDIN_LINK" target="_blank" class="floating-btn linkedin-btn">
+        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        <span class="btn-text">LinkedIn</span>
     </a>
+
+    <a href="https://www.facebook.com/groups/1907200953505354/?ref=share&mibextid=NSMWBT" target="_blank" class="floating-btn facebook-btn">
+        <svg viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.75l-11 71.69h-57.75V501C413.31 482.38 504 379.78 504 256z"/></svg>
+        <span class="btn-text">Facebook</span>
+    </a>
+
+    <a href="https://wa.me/254726580840?text=Hello%20Heros%20Academy%20I'm%20interested%20in%20learning%20more." target="_blank" class="floating-btn whatsapp-btn">
+        <svg viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339.7 54.7 283.6 30 224.2 30c-113.6 0-205.8 92.2-205.8 205.8 0 35.3 9.7 69.8 28.1 100.9l-29.6 108.3 111.9-29.4c30.1 16.4 64.6 25 100.2 25h.1c113.6 0 205.8-92.2 205.8-205.8-.1-59.5-24.8-115.6-67.1-156.8zM224.2 400.9h-.1c-32.9 0-63.7-8.9-90.9-24.4l-6.4-3.8-66.5 17.5 17.9-65.7-4.2-6.7c-17.6-28.2-27.2-60.7-27.2-94.8 0-93.5 76-169.5 169.5-169.5 49.3 0 95.7 21.1 129.2 54.6 33.5 33.5 54.6 79.9 54.6 129.2.1 93.5-75.9 169.5-169.5 169.5zM342.9 292.1c-1.7-2.9-6.9-4.6-14.7-8.5-7.8-3.9-46.3-22.9-53.6-25.5-7.3-2.6-12.6-3.9-17.9 3.9-5.3 7.8-20.6 25.5-25.2 30.8-4.6 5.3-9.3 5.9-17.9 1.4-10.4-5.3-44-16.2-83.6-51.6-31.9-28-53.5-63-59.8-73.6-6.3-10.4-.7-16 4.6-21.3 4.3-4.3 9.3-10.2 13.9-15.3 4.6-5.1 6.1-4.3 9.3-4.3s6.8-.7 10.4-.7c3.6 0 9.3-.5 13.9 5.3 4.6 5.3 5.9 12.6 8.5 15.8.7.7 1.4 1.4 2.1 2.1 2.6 3.9 5.3 7.9 5.9 8.5 2.6 2.6 1.7 4.6-1.7 8.5-4.6 5.3-9.3 10.4-14.7 16.2-5.9 6.8-11.3 13.5-13.9 16.2-2.6 2.6-2.6 4.6-.3 8.5 2.6 4.6 10.7 15.3 15.1 23.3 4.3 7.8 8.9 15.8 13.5 24.3 5.3 9.5 12.6 19.1 19.8 28.1 7.3 8.5 15.8 16.7 24.1 24.6 5.9 5.5 12.1 11.2 19.8 16.7 5.3 3.6 10.7 7.1 16.2 10.4 7.8 4.6 15.8 8.1 25.2 10.4 4.8 1.4 9.6 2.6 14.2 3.2 5.9 1 11.8 1.4 17.6 1.4h.1c9.3 0 17.9-1.4 26.5-4.1 8.6-2.6 16.4-5.9 22.8-9.9 2.1-1.4 3.9-2.9 5.3-4.1.7-.7 1.4-1.4 2.1-2.1 2.6-2.6 3.9-4.6 3.9-6.3 0-1.7-4.6-7.3-9.3-12.6-4.6-5.3-9.3-10.2-13.9-15.3z"/></svg>
+        <span class="btn-text">Help</span>
+    </a>
+</div>
 
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
